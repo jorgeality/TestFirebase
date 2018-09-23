@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="contenido">
+
+    </div>
+
+    <h3>registrar usuario</h3>
+    <input type="text" name="email" placeholder="email" id="email"><br>
+    <input type="password" name="password" id="password" placeholder="password">
+    <button onclick="registrar()">send</button>
+    <h3>login</h3>
+    <input type="text" name="emailLogin" placeholder="email" id="emailLogin"><br>
+    <input type="password" name="passwordLogin" placeholder="password" id="passwordLogin">
+    <button onclick="ingresar()">login</button>
+    <h3>crear registros</h3>
+
+    <input type="text" id="recordName" placeholder="Name" name="recordName">
+    <input type="text" id="recordLastName" placeholder="LastName" name="recordLastName">
+    <input type="text" id="recordId" placeholder="Identification" name="recordId">
+    <input type="text" id="recordAge" placeholder="Age" name="recordAge">
+    <button onclick="saveRecord()">Save</button>
+
+
+    <table border="1px" id="info-tabla">
+        <thead>
+            <tr>
+                <th>options</th>
+                <th>Identification</th>
+                <th>LastName</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+    <input type="text" id="recordNameUpdate" placeholder="Name" name="recordNameUpdate">
+    <input type="text" id="recordLastNameUpdate" placeholder="LastName" name="recordLastNameUpdate">
+    <input type="text" id="recordIdUpdate" placeholder="Identification" name="recordIdUpdate">
+    <input type="text" id="recordAgeUpdate" placeholder="Age" name="recordAgeUpdate">
+    <button onclick="updateRecord()">update</button>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+    <script src="FireBaseConnect.js"></script>
+    <script src="Controller.js"></script>
+</body>
+
+</html>
+<!---
+
+cedula : 1143340482
+
+
+carlos yair martinez guzman -->
