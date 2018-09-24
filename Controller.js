@@ -28,7 +28,7 @@ function ingresar() {
         console.log(errorCode);
         console.log(errorMessage);
     });
-
+    verificarLogin();
 }
 
 function verificarLogin() {
@@ -45,11 +45,13 @@ function verificarLogin() {
             var providerData = user.providerData;
             // ...
             verificarUsuarioActivo(email);
+            window.onload = loadpage();
             ReadData();
         } else {
             // User is signed out.
             var contenido = document.getElementById('contenido');
             contenido.innerHTML = '';
+            window.location.href = 'login.html';
             // ...
         }
     });
@@ -64,6 +66,7 @@ function verificarUsuarioActivo(content) {
 }
 function logout() {
     firebase.auth().signOut().then(function () {
+        window.location.href = 'login.html';
         console.log('succesfull');
         var tbody = document.getElementById('tbody');
         tbody.innerHTML = '';
