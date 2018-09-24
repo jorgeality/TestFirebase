@@ -5,54 +5,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link rel="stylesheet" type="text/css" href="resource/css/style.css">
     <title>Document</title>
 
 </head>
 
 <body>
+  <!--Section menu-->
+<section>
+
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a href="#test1">Registrar</a></li>
+        <li class="tab"><a  href="#test2">Guardar usuario</a></li>
+        <li class="tab"><a href="#test3">Gestionar</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">JavaScript</a></li>
+  </ul>
+
+  <div id="test1" class="col s12">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center">
+          <h3>registrar usuario</h3>
+        </div>
+        <div class="col s12 center">
+          <input type="text" name="email" placeholder="email" id="email">
+        </div>
+        <div class="col s12 center">
+          <input type="password" name="password" id="password" placeholder="password">
+        </div>
+        <div class="col s12 center">
+          <button class="btn" onclick="registrar()">send</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div id="test2" class="col s12">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center">
+          <h3>crear registros</h3>
+        </div>
+        <div class="col s12">
+          <input type="text" id="recordName" placeholder="Name" name="recordName">
+        </div>
+        <div class="col s12">
+          <input type="text" id="recordLastName" placeholder="LastName" name="recordLastName">
+        </div>
+        <div class="col s12">
+          <input type="text" id="recordId" placeholder="Identification" name="recordId">
+        </div>
+        <div class="col s12">
+          <input type="text" id="recordAge" placeholder="Age" name="recordAge">
+        </div>
+        <div class="col s12 center">
+          <button class="btn" onclick="saveRecord()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="test3" class="col s12">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <table border="1px" id="info-tabla">
+              <thead>
+                  <tr>
+                      <th>options</th>
+                      <th>Identification</th>
+                      <th>LastName</th>
+                      <th>Name</th>
+                      <th>Age</th>
+                  </tr>
+              </thead>
+              <tbody id="tbody">
+              </tbody>
+          </table>
+        </div>
+        <div class="col s12">
+          <input type="text" id="recordNameUpdate" placeholder="Name" name="recordNameUpdate">
+        </div>
+        <div class="col s12">
+          <input type="text" id="recordLastNameUpdate" placeholder="LastName" name="recordLastNameUpdate">
+        </div>
+        <div class="col s12">
+          <input type="text" id="recordIdUpdate" placeholder="Identification" name="recordIdUpdate">
+        </div>
+        <div class="col s12">
+          <input type="text" id="recordAgeUpdate" placeholder="Age" name="recordAgeUpdate">
+        </div>
+        <div class="col s12 center">
+          <button class="btn" onclick="updateRecord()">update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
     <div id="contenido">
 
     </div>
 
-    <h3>registrar usuario</h3>
-    <input type="text" name="email" placeholder="email" id="email"><br>
-    <input type="password" name="password" id="password" placeholder="password">
-    <button onclick="registrar()">send</button>
-    <h3>login</h3>
-    <input type="text" name="emailLogin" placeholder="email" id="emailLogin"><br>
-    <input type="password" name="passwordLogin" placeholder="password" id="passwordLogin">
-    <button onclick="ingresar()">login</button>
-    <h3>crear registros</h3>
-
-    <input type="text" id="recordName" placeholder="Name" name="recordName">
-    <input type="text" id="recordLastName" placeholder="LastName" name="recordLastName">
-    <input type="text" id="recordId" placeholder="Identification" name="recordId">
-    <input type="text" id="recordAge" placeholder="Age" name="recordAge">
-    <button onclick="saveRecord()">Save</button>
-
-
-    <table border="1px" id="info-tabla">
-        <thead>
-            <tr>
-                <th>options</th>
-                <th>Identification</th>
-                <th>LastName</th>
-                <th>Name</th>
-                <th>Age</th>
-            </tr>
-        </thead>
-        <tbody id="tbody">
-        </tbody>
-    </table>
-    <input type="text" id="recordNameUpdate" placeholder="Name" name="recordNameUpdate">
-    <input type="text" id="recordLastNameUpdate" placeholder="LastName" name="recordLastNameUpdate">
-    <input type="text" id="recordIdUpdate" placeholder="Identification" name="recordIdUpdate">
-    <input type="text" id="recordAgeUpdate" placeholder="Age" name="recordAgeUpdate">
-    <button onclick="updateRecord()">update</button>
-
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
     <script src="FireBaseConnect.js"></script>
     <script src="Controller.js"></script>
+    <script src="resource/js/init.js"></script>
 </body>
 
 </html>

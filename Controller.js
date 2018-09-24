@@ -124,7 +124,7 @@ function getRecordToUpdate(docId) {
     });
 }
 function getRecordToDelete(docId) {
-    
+
     if(confirm("are you sure to delete this record?")){
         database.collection("people").doc(docId).delete().then(function() {
             console.log("Document successfully deleted!");
@@ -133,7 +133,7 @@ function getRecordToDelete(docId) {
             console.error("Error removing document: ", error);
         });
     }
-    
+
 }
 function updateRecord() {
     console.log('id : ',IdDoc);
