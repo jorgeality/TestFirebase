@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Compiled and minified CSS -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
    <link rel="stylesheet" type="text/css" href="resource/css/style.css">
     <title>Document</title>
 
@@ -21,14 +22,11 @@
       <a href="#" class="brand-logo">Logo</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+        <li id="contenido"></li>
       </ul>
     </div>
     <div class="nav-content">
       <ul class="tabs tabs-transparent">
-        <li class="tab"><a href="#test1">Registrar</a></li>
         <li class="tab"><a  href="#test2">Guardar usuario</a></li>
         <li class="tab"><a href="#test3">Gestionar</a></li>
       </ul>
@@ -36,30 +34,10 @@
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">JavaScript</a></li>
+    <li id="contenido"></li>
   </ul>
 
-  <div id="test1" class="col s12">
-    <div class="container">
-      <div class="row">
-        <div class="col s12 center">
-          <h3>registrar usuario</h3>
-        </div>
-        <div class="col s12 center">
-          <input type="text" name="email" placeholder="email" id="email">
-        </div>
-        <div class="col s12 center">
-          <input type="password" name="password" id="password" placeholder="password">
-        </div>
-        <div class="col s12 center">
-          <button class="btn" onclick="registrar()">send</button>
-        </div>
 
-      </div>
-    </div>
-  </div>
   <div id="test2" class="col s12">
     <div class="container">
       <div class="row">
@@ -88,7 +66,7 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <table border="1px" id="info-tabla">
+          <table class="centered striped" border="1px" id="info-tabla">
               <thead>
                   <tr>
                       <th>options</th>
@@ -122,10 +100,6 @@
   </div>
 
 </section>
-
-    <div id="contenido">
-
-    </div>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

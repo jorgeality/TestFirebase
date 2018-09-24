@@ -1,7 +1,18 @@
-#login{
+#img-background{
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  min-height: 100vh;
+}
+
+table.striped > tbody > tr:nth-child(2n+1) {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+i {
+    line-height: inherit;
+    font-size: 1rem;
 }
 
 .content-white{
@@ -102,6 +113,18 @@ button:focus {
 .tabs.tabs-transparent .tab a:hover, .tabs.tabs-transparent .tab a.active {
     color: white !important;
     background-color: black;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.font-a{
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bold;
 }
 
 .tabs .tab a:focus, .tabs .tab a:focus.active {

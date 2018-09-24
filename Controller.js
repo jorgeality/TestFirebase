@@ -59,10 +59,7 @@ function verificarLogin() {
 
 function verificarUsuarioActivo(content) {
     var contenido = document.getElementById('contenido');
-    contenido.innerHTML = `
-    hola ..`+ content + `
-    <button onclick="logout()">logOut</button>
-    `;
+    contenido.innerHTML = '<a onclick="logout()">logOut</a>';
 }
 function logout() {
     firebase.auth().signOut().then(function () {
@@ -103,7 +100,7 @@ function ReadData() {
         querySnapshot.forEach((doc) => {
             tbody.innerHTML +=
                 `<tr>` +
-                `<td><a onclick="getRecordToUpdate('` + doc.id + `');">Update</a> / <a onclick="getRecordToDelete('` + doc.id + `');">Delete</a></td>` +
+                `<td><a onclick="getRecordToUpdate('` + doc.id + `');"><i class="fas fa-highlighter"></i></a> / <a onclick="getRecordToDelete('` + doc.id + `');"><i class="far fa-trash-alt"></i></a></td>` +
                 `<td>` + doc.data().Id + `</td>` +
                 `<td>` + doc.data().LastName + `</td>` +
                 `<td>` + doc.data().Name + `</td>` +

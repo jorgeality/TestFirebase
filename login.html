@@ -15,33 +15,61 @@
 
 </head>
 
-<body id="login" style="background-image: url('resource/img/login.jpg');">
-
-  <div class="container center-content content-white">
-    <div class="row">
-      <div class="col s12">
-        <h3 class="title">login</h3>
+<body>
+  <div id="img-background" style="background-image: url('resource/img/login.jpg');">
+    <div class="container center-content content-white">
+      <div class="row" id="Login">
+        <div class="col s12">
+          <h3 class="title">login</h3>
+        </div>
+        <div class="col s12 center-content">
+          <input type="text" name="emailLogin" placeholder="email" id="emailLogin">
+        </div>
+        <div class="col s12 center-content">
+          <input type="password" name="passwordLogin" placeholder="password" id="passwordLogin">
+        </div>
+        <div class="col s12 center-content">
+          <div class="col s6" align="right">
+            <button class="btn" onclick="ingresar()">login</button>
+          </div>
+          <div class="col s6">
+            <a href="#register" class="font-a modal-trigger">
+            Create account</a>
+          </div>
+        </div>
       </div>
-      <div class="col s12 center-content">
-        <input type="text" name="emailLogin" placeholder="email" id="emailLogin">
-      </div>
-      <div class="col s12 center-content">
-        <input type="password" name="passwordLogin" placeholder="password" id="passwordLogin">
-      </div>
-      <div class="col s12 center-content">
-        <button class="btn" onclick="ingresar()">login</button>
-      </div>
-
     </div>
+  </div>
 
+  <!-- Modal Structure -->
+  <div id="register" class="modal" >
+    <div class="modal-content center-content" id="img-background" style="min-height: 100%;">
+      <div class="container content-white" style="top:0px;">
+        <div class="row">
+          <div class="col s12 center">
+            <h3>Registe</h3>
+          </div>
+          <div class="col s12 center">
+            <input type="text" name="email" placeholder="email" id="email">
+          </div>
+          <div class="col s12 center">
+            <input type="password" name="password" id="password" placeholder="password">
+          </div>
+          <div class="col s12 center">
+            <button class="btn" onclick="registrar()">send</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="Controller.js"></script>
+    <script src="resource/js/init.js"></script>
 
-    
 </body>
 
 </html>
