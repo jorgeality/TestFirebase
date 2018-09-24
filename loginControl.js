@@ -1,6 +1,7 @@
 var databas = firebase.firestore();
 const setting = { timestampsInSnapshots: true };
 databas.settings(setting);
+var sections =['Login','Register'];
 verificarInLogin();
 function verificarInLogin() {
     firebase.auth().onAuthStateChanged(function (user) {
@@ -30,4 +31,12 @@ function verificarInLogin() {
 }
 function loadpage(){
     window.location.href = 'index.html';
+}
+function next(x){
+    document.getElementById(x).style.display = 'block';
+    for(var s in sections){
+        if(sections[s] != x){
+            document.getElementById(sections[s]).style.display = 'none';
+        }
+    }
 }
