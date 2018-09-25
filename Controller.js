@@ -45,7 +45,7 @@ function verificarLogin() {
             var providerData = user.providerData;
             // ...
             verificarUsuarioActivo(email);
-            window.onload = loadpage();
+
             ReadData();
         } else {
             // User is signed out.
@@ -125,28 +125,32 @@ function getRecordToUpdate(docId) {
 }
 function getRecordToDelete(docId) {
 
-    if(confirm("are you sure to delete this record?")){
-        database.collection("people").doc(docId).delete().then(function() {
+    if (confirm("are you sure to delete this record?")) {
+        database.collection("people").doc(docId).delete().then(function () {
             console.log("Document successfully deleted!");
             ReadData();
-        }).catch(function(error) {
+        }).catch(function (error) {
             console.error("Error removing document: ", error);
         });
     }
 
 }
 function updateRecord() {
-    console.log('id : ',IdDoc);
+    console.log('id : ', IdDoc);
     database.collection("people").doc(IdDoc).update({
-        "LastName" : document.getElementById('recordLastNameUpdate').value,
-        "Age" : document.getElementById('recordAgeUpdate').value,
-        "Id" : document.getElementById('recordIdUpdate').value,
+        "LastName": document.getElementById('recordLastNameUpdate').value,
+        "Age": document.getElementById('recordAgeUpdate').value,
+        "Id": document.getElementById('recordIdUpdate').value,
         "Name": document.getElementById('recordNameUpdate').value
     })
-    .then(function() {
-        console.log("Document successfully updated!");
-        ReadData();
-    });
+        .then(function () {
+            console.log("Document successfully updated!");
+            ReadData();
+            document.getElementById('recordLastNameUpdate').value = '';
+            document.getElementById('recordAgeUpdate').value = '';
+            document.getElementById('recordIdUpdate').value = '';
+            document.getElementById('recordNameUpdate').value = '';
+        });
     IdDoc = '';
 }
 
